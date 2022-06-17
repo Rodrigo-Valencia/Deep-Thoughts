@@ -5,7 +5,7 @@ import { QUERY_THOUGHT } from '../utils/queries';
 import ReactionList from '../components/ReactionList';
 
 const SingleThought = props => {
-  const { id: thoughtId } = useParam();
+  const { id: thoughtId } = useParams();
   
   const { loading, data } = useQuery(QUERY_THOUGHT, {
     variables: { id: thoughtId }
